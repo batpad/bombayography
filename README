@@ -24,4 +24,6 @@ this will create the tables and import the initial data.
 4> Run the server:
 in the best/ folder:
 python manage.py runserver
+In another terminal:
+python manage.py runrouter
 you can now see the app and test sms in the browser at http://localhost:8000
