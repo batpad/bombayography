@@ -1,0 +1,27 @@
+1> Setup virtualenv and install rapidsms:
+in root folder of project:
+virtualenv .
+. bin/activate
+pip -E . install rapidsms
+
+2> Setup database and create local_settings.py
+Create a database and put its settings in a file called local_settings.py inside the best/ folder.
+eg. local_settings file:
+DATABASES = {
+    "default": {
+        "ENGINE": "django.db.backends.postgresql_psycopg2",
+        "NAME": "bestdata",
+        "USER": "sanj",
+        "PASSWORD": '',
+    }
+}
+
+3> Create db tables and import initial data:
+in the best/ folder:
+python manage.py syncdb
+this will create the tables and import the initial data.
+
+4> Run the server:
+in the best/ folder:
+python manage.py runserver
+you can now see the app and test sms in the browser at http://localhost:8000
